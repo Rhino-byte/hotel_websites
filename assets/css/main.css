@@ -15,10 +15,10 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #40524d; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0d1f1a; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #2f5d50; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: #fff8f0; /* Background color for the entire website, including individual sections */
+  --default-color: #2c3e50; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #8b4513; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #ff6600; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,7 +30,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #40524d; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #2f5d50; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #ff6600; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -41,16 +41,35 @@
 }
 
 .dark-background {
-  --background-color: #2f5d50;
+  --background-color: #d2691e;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #2e2b28;
+  --surface-color: #8b4513;
   --contrast-color: #ffffff;
 }
 
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+/* Footer text size improvements */
+.footer {
+  font-size: 1.1rem;
+}
+
+.footer-contact p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  font-size: 1rem;
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -139,7 +158,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #436e62;
+  --background-color: #ff6600;
   --heading-color: #ffffff;
   color: var(--default-color);
   transition: all 0.5s;
