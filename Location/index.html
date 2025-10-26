@@ -62,6 +62,11 @@
 
   </header>
 
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+    <i class="bi bi-moon-fill"></i>
+  </button>
+
   <main class="main">
 
     <!-- Page Title -->
@@ -92,8 +97,8 @@
                 <i class="bi bi-geo-alt-fill"></i>
                 <span>Prime Location</span>
               </div>
-              <h2 class="location-title">Beachfront Paradise Location</h2>
-              <p class="location-description">Located on the pristine shores of Diani Beach, Teliza Beach Gardens offers the perfect setting for your special events. Our beachfront location provides stunning ocean views and direct beach access for unforgettable celebrations.</p>
+              <h2 class="location-title">Teliza Beach Gardens Location</h2>
+              <p class="location-description">Discover the charm of Teliza Beach Gardens, a serene escape set beside the calm waters of Ruiru Dam. With beautiful gardens, relaxing boat rides, a refreshing swimming pool, and spacious event grounds, it’s the ideal place to celebrate, unwind, and connect with loved ones. Whether it’s a family outing, graduation party, or a weekend getaway, Teliza Beach offers something special for everyone.</p>
 
               <div class="info-grid">
                 <div class="info-item">
@@ -462,6 +467,43 @@
 
   <!-- Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <!-- Theme Toggle JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('themeToggle');
+      const body = document.body;
+      
+      // Check for saved theme preference or default to 'light'
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      
+      // Apply the saved theme
+      if (currentTheme === 'dark') {
+        body.setAttribute('data-theme', 'dark');
+        themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
+        themeToggle.title = 'Switch to Light Mode';
+      }
+      
+      // Theme toggle functionality
+      themeToggle.addEventListener('click', function() {
+        const currentTheme = body.getAttribute('data-theme');
+        
+        if (currentTheme === 'dark') {
+          // Switch to light theme
+          body.removeAttribute('data-theme');
+          themeToggle.innerHTML = '<i class="bi bi-moon-fill"></i>';
+          themeToggle.title = 'Toggle Dark Mode';
+          localStorage.setItem('theme', 'light');
+        } else {
+          // Switch to dark theme
+          body.setAttribute('data-theme', 'dark');
+          themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
+          themeToggle.title = 'Switch to Light Mode';
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    });
+  </script>
 
 </body>
 
