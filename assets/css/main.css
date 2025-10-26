@@ -1020,17 +1020,34 @@ section,
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.hotel-hero .hero-stats .stat-item .stat-number {
+.hotel-hero .hero-stats .stat-item .stat-container {
   display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-hero .hero-stats .stat-item .stat-number {
+  display: inline;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--accent-color);
   line-height: 1;
-  margin-bottom: 0.5rem;
+}
+
+.hotel-hero .hero-stats .stat-item .stat-suffix {
+  display: inline;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1;
+  vertical-align: baseline;
 }
 
 @media (max-width: 768px) {
   .hotel-hero .hero-stats .stat-item .stat-number {
+    font-size: 2rem;
+  }
+  
+  .hotel-hero .hero-stats .stat-item .stat-suffix {
     font-size: 2rem;
   }
 }
